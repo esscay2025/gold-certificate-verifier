@@ -1,0 +1,397 @@
+/* Gold Certificate Verifier - Public Styles */
+
+:root {
+	--gold-primary: #d4af37;
+	--gold-dark: #b8941f;
+	--charcoal: #2c2c2c;
+	--dark-bg: #1a1a1a;
+	--light-bg: #f5f5f5;
+	--border-color: #ddd;
+	--text-color: #333;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body.gcv-certificate-page {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: var(--light-bg);
+	color: var(--text-color);
+	line-height: 1.6;
+}
+
+.gcv-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.gcv-header {
+	background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark-bg) 100%);
+	color: var(--gold-primary);
+	padding: 40px 30px;
+	text-align: center;
+	border-bottom: 3px solid var(--gold-primary);
+}
+
+.gcv-header h1 {
+	font-size: 2.5em;
+	margin-bottom: 10px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.gcv-subtitle {
+	font-size: 1.2em;
+	color: rgba(212, 175, 55, 0.8);
+	font-weight: 300;
+}
+
+/* Product Title */
+.gcv-product-title {
+	text-align: center;
+	font-size: 2em;
+	color: var(--charcoal);
+	margin: 30px 0;
+	padding: 20px;
+	border-bottom: 2px solid var(--gold-primary);
+	font-weight: 600;
+}
+
+/* Main Content */
+.gcv-content {
+	padding: 30px;
+}
+
+/* Certificate Wrapper */
+.gcv-certificate-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	margin-bottom: 40px;
+	align-items: start;
+}
+
+/* Left Section - Image */
+.gcv-left-section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.gcv-image-container {
+	border: 3px dashed var(--gold-primary);
+	border-radius: 8px;
+	padding: 20px;
+	background-color: var(--light-bg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
+	position: relative;
+}
+
+.gcv-product-image {
+	max-width: 100%;
+	max-height: 400px;
+	object-fit: contain;
+	cursor: zoom-in;
+	transition: transform 0.3s ease;
+}
+
+.gcv-product-image:hover {
+	transform: scale(1.05);
+}
+
+.gcv-no-image {
+	color: #999;
+	text-align: center;
+	font-style: italic;
+}
+
+/* Gallery */
+.gcv-gallery {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gcv-gallery-thumb {
+	width: 80px;
+	height: 80px;
+	border: 2px solid var(--border-color);
+	border-radius: 4px;
+	cursor: pointer;
+	object-fit: cover;
+	transition: all 0.3s ease;
+}
+
+.gcv-gallery-thumb:hover {
+	border-color: var(--gold-primary);
+	transform: scale(1.1);
+}
+
+/* Right Section - Details Table */
+.gcv-right-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.gcv-details-table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+.gcv-details-table tr {
+	border-bottom: 1px solid var(--border-color);
+}
+
+.gcv-details-table tr:last-child {
+	border-bottom: none;
+}
+
+.gcv-details-table tr:nth-child(even) {
+	background-color: rgba(212, 175, 55, 0.05);
+}
+
+.gcv-details-table td {
+	padding: 15px;
+	vertical-align: middle;
+}
+
+.gcv-label {
+	font-weight: 600;
+	color: var(--charcoal);
+	width: 40%;
+	background-color: rgba(212, 175, 55, 0.1);
+}
+
+.gcv-value {
+	color: var(--text-color);
+	font-size: 1.05em;
+}
+
+/* QR Code Section */
+.gcv-qr-section {
+	display: flex;
+	justify-content: center;
+	margin: 40px 0;
+	padding: 30px;
+	background-color: var(--light-bg);
+	border-radius: 8px;
+}
+
+.gcv-qr-container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+#gcv-qrcode {
+	background-color: white;
+	padding: 10px;
+	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gcv-qr-label {
+	font-weight: 600;
+	color: var(--charcoal);
+	font-size: 1.1em;
+}
+
+/* Action Buttons */
+.gcv-actions {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	margin: 30px 0;
+	flex-wrap: wrap;
+}
+
+.gcv-btn {
+	padding: 12px 30px;
+	border: none;
+	border-radius: 4px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.gcv-btn-print {
+	background-color: var(--charcoal);
+	color: white;
+}
+
+.gcv-btn-print:hover {
+	background-color: var(--text-color);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gcv-btn-pdf {
+	background-color: var(--gold-primary);
+	color: var(--charcoal);
+}
+
+.gcv-btn-pdf:hover {
+	background-color: var(--gold-dark);
+	color: white;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Contact Section */
+.gcv-contact-section {
+	background-color: var(--light-bg);
+	padding: 30px;
+	border-radius: 8px;
+	margin: 30px 0;
+	border-left: 4px solid var(--gold-primary);
+}
+
+.gcv-contact-section h3 {
+	color: var(--charcoal);
+	margin-bottom: 15px;
+	font-size: 1.3em;
+}
+
+.gcv-contact-section p {
+	margin-bottom: 10px;
+	color: var(--text-color);
+}
+
+.gcv-contact-info a {
+	color: var(--gold-primary);
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+
+.gcv-contact-info a:hover {
+	color: var(--gold-dark);
+	text-decoration: underline;
+}
+
+/* Footer */
+.gcv-footer {
+	background-color: var(--charcoal);
+	color: var(--gold-primary);
+	text-align: center;
+	padding: 20px;
+	font-size: 0.9em;
+	border-top: 2px solid var(--gold-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.gcv-header h1 {
+		font-size: 1.8em;
+	}
+
+	.gcv-product-title {
+		font-size: 1.4em;
+	}
+
+	.gcv-certificate-wrapper {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.gcv-image-container {
+		min-height: 300px;
+	}
+
+	.gcv-product-image {
+		max-height: 300px;
+	}
+
+	.gcv-details-table td {
+		padding: 10px;
+		font-size: 0.95em;
+	}
+
+	.gcv-actions {
+		flex-direction: column;
+	}
+
+	.gcv-btn {
+		width: 100%;
+	}
+
+	.gcv-content {
+		padding: 20px;
+	}
+
+	.gcv-header {
+		padding: 30px 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.gcv-header h1 {
+		font-size: 1.4em;
+	}
+
+	.gcv-product-title {
+		font-size: 1.1em;
+		padding: 15px;
+	}
+
+	.gcv-details-table td {
+		padding: 8px;
+		font-size: 0.9em;
+	}
+
+	.gcv-label {
+		width: 50%;
+	}
+
+	#gcv-qrcode {
+		transform: scale(0.8);
+	}
+
+	.gcv-contact-section {
+		padding: 20px;
+	}
+}
+
+/* Print Styles */
+@media print {
+	body {
+		background-color: white;
+	}
+
+	.gcv-container {
+		box-shadow: none;
+		max-width: 100%;
+	}
+
+	.gcv-actions {
+		display: none;
+	}
+
+	.gcv-header {
+		page-break-after: avoid;
+	}
+
+	.gcv-certificate-wrapper {
+		page-break-inside: avoid;
+	}
+
+	.gcv-contact-section {
+		page-break-inside: avoid;
+	}
+}

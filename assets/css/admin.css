@@ -1,0 +1,176 @@
+/* Gold Certificate Verifier - Admin Styles */
+
+:root {
+	--gold-primary: #d4af37;
+	--gold-dark: #b8941f;
+	--charcoal: #2c2c2c;
+}
+
+/* Admin Menu Icon */
+#adminmenu .toplevel_page_gold-certificates .wp-menu-image {
+	background-color: var(--gold-primary);
+	border-radius: 3px;
+}
+
+/* Admin Page Styling */
+.wrap h1 {
+	color: var(--charcoal);
+	border-bottom: 3px solid var(--gold-primary);
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.page-title-action {
+	background-color: var(--gold-primary);
+	color: var(--charcoal);
+	border-color: var(--gold-dark);
+	font-weight: 600;
+	padding: 8px 15px;
+	text-decoration: none;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+
+.page-title-action:hover {
+	background-color: var(--gold-dark);
+	color: white;
+}
+
+/* Form Styling */
+.form-table th {
+	background-color: rgba(212, 175, 55, 0.1);
+	border-left: 3px solid var(--gold-primary);
+	padding-left: 12px;
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="tel"],
+.form-table input[type="url"],
+.form-table input[type="date"],
+.form-table input[type="number"],
+.form-table textarea {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 8px;
+	font-size: 1em;
+	transition: border-color 0.3s ease;
+}
+
+.form-table input[type="text"]:focus,
+.form-table input[type="email"]:focus,
+.form-table input[type="tel"]:focus,
+.form-table input[type="url"]:focus,
+.form-table input[type="date"]:focus,
+.form-table input[type="number"]:focus,
+.form-table textarea:focus {
+	border-color: var(--gold-primary);
+	box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+	outline: none;
+}
+
+/* Submit Button */
+.button.button-primary {
+	background-color: var(--gold-primary);
+	border-color: var(--gold-dark);
+	color: var(--charcoal);
+	font-weight: 600;
+	padding: 10px 20px;
+	transition: all 0.3s ease;
+}
+
+.button.button-primary:hover {
+	background-color: var(--gold-dark);
+	color: white;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styling */
+.widefat thead th {
+	background-color: var(--charcoal);
+	color: var(--gold-primary);
+	font-weight: 600;
+	padding: 12px;
+	border: none;
+}
+
+.widefat tbody tr:hover {
+	background-color: rgba(212, 175, 55, 0.05);
+}
+
+.widefat tbody td {
+	padding: 12px;
+	vertical-align: middle;
+}
+
+.widefat tbody a {
+	color: var(--gold-primary);
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+
+.widefat tbody a:hover {
+	color: var(--gold-dark);
+	text-decoration: underline;
+}
+
+/* Notice Styling */
+.notice.notice-success {
+	border-left: 4px solid #46b450;
+	background-color: #ecf7ed;
+}
+
+.notice.notice-error {
+	border-left: 4px solid #dc3545;
+	background-color: #fdeaea;
+}
+
+/* Media Uploader */
+#image_preview {
+	margin-top: 15px;
+	max-width: 200px;
+}
+
+#image_preview img {
+	max-width: 100%;
+	height: auto;
+	border: 2px solid var(--gold-primary);
+	border-radius: 3px;
+}
+
+/* Pagination */
+.tablenav-pages {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.pagination-links {
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.pagination-links a,
+.pagination-links span {
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	text-decoration: none;
+	color: var(--charcoal);
+	transition: all 0.3s ease;
+}
+
+.pagination-links a:hover {
+	background-color: var(--gold-primary);
+	color: var(--charcoal);
+	border-color: var(--gold-primary);
+}
+
+.pagination-links .current {
+	background-color: var(--gold-primary);
+	color: var(--charcoal);
+	border-color: var(--gold-primary);
+	font-weight: 600;
+}
